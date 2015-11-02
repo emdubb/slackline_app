@@ -3,6 +3,7 @@ User.destroy_all
 Line.destroy_all
 
 slacker1 = User.create(
+  name: "SlacKing"
   email: "1@slack.com",
   password: "abc123",
   password_confirmation: "abc123",
@@ -13,6 +14,7 @@ slacker1 = User.create(
 )
 
 slacker2 = User.create(
+  name: "Slacker47"
   email: "2@slack.com",
   password: "abc123",
   password_confirmation: "abc123",
@@ -23,6 +25,7 @@ slacker2 = User.create(
 )
 
 slacker3 = User.create(
+  name: "Melissa"
   email: "3@slack.com",
   password: "abc123",
   password_confirmation: "abc123",
@@ -33,6 +36,7 @@ slacker3 = User.create(
 )
 
 slacker4 = User.create(
+  name: "Slack Master"
   email: "4@slack.com",
   password: "abc123",
   password_confirmation: "abc123",
@@ -43,6 +47,7 @@ slacker4 = User.create(
 )
 
 slacker5 = User.create(
+  name: "Trickster"
   email: "5@slack.com",
   password: "abc123",
   password_confirmation: "abc123",
