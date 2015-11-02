@@ -58,7 +58,7 @@ surfline = Line.create(
   width: 2,
   style: "Surf",
   system: "Double Rachet",
-  is_active: false
+  is_active: true
 )
 jibline = Line.create(
   brand: "Gibbon",
@@ -66,7 +66,7 @@ jibline = Line.create(
   width: 2,
   style: "Jib",
   system: "Single Rachet",
-  is_active: false
+  is_active: true
 )
 rodeoline = Line.create(
   brand: "Gibbon",

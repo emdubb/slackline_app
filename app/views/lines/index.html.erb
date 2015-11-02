@@ -1,1 +1,13 @@
 <h1>Lines</h1>
+
+<table>
+<% @lines.each do |line| %>
+  <tr>
+    <td><%= line.brand %></td>
+    <td><%= line.length %>ft</td>
+    <td><%= line.width %>in</td>
+    <td><%= line.style %> Line</td>
+    <td><%= line.system %></td>
+  </tr>
+<% end %>
+</table>
