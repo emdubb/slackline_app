@@ -2,11 +2,11 @@ class CreateLines < ActiveRecord::Migration
   def change
     create_table :lines do |t|
       t.string :brand
-      t.string :length
-      t.string :width
+      t.integer :length
+      t.integer :width
       t.string :style
       t.string :system
-      t.string :is_active
+      t.boolean :is_active
 
       t.timestamps null: false
     end

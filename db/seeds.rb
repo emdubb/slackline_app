@@ -1,5 +1,6 @@
 # clean out all current data
 User.destroy_all
+Line.destroy_all
 
 slacker1 = User.create(
   email: "1@slack.com",
@@ -26,7 +27,7 @@ slacker3 = User.create(
   password: "abc123",
   password_confirmation: "abc123",
   profile_img: "https://raw.githubusercontent.com/ga-students/WDI_DTLA_6/master/work/w05/d04/instructor/mumblr_ah/assets/default-profile-image.jpg?token=ANZuhGSIFyp-nT0Zosb1XxOzyA09kz0mks5WQO-iwA%3D%3D",
-  lines: "Surf Line",
+  lines: "Surf",
   skill: "Advanced",
   location: "Santa Monica"
 )
@@ -49,4 +50,29 @@ slacker5 = User.create(
   lines: "Rodeo Line",
   skill: "Advanced",
   location: "Santa Monica"
+)
+
+surfline = Line.create(
+  brand: "Gibbon",
+  length: 50,
+  width: 2,
+  style: "Surf",
+  system: "Double Rachet",
+  is_active: false
+)
+jibline = Line.create(
+  brand: "Gibbon",
+  length: 30,
+  width: 2,
+  style: "Jib",
+  system: "Single Rachet",
+  is_active: false
+)
+rodeoline = Line.create(
+  brand: "Gibbon",
+  length: 40,
+  width: 2,
+  style: "Classic",
+  system: "Single Rachet",
+  is_active: false
 )

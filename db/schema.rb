@@ -18,11 +18,11 @@ ActiveRecord::Schema.define(version: 20151102220055) do
 
   create_table "lines", force: :cascade do |t|
     t.string   "brand"
-    t.string   "length"
-    t.string   "width"
+    t.integer  "length"
+    t.integer  "width"
     t.string   "style"
     t.string   "system"
-    t.string   "is_active"
+    t.boolean  "is_active"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
