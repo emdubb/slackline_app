@@ -21,12 +21,9 @@ ActiveRecord::Schema.define(version: 20151103003554) do
     t.float    "longitude"
     t.string   "difficulty"
     t.string   "message"
-    t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
-
-  add_index "active_lines", ["user_id"], name: "index_active_lines_on_user_id", using: :btree
 
   create_table "lines", force: :cascade do |t|
     t.string   "brand"
@@ -35,21 +32,23 @@ ActiveRecord::Schema.define(version: 20151103003554) do
     t.string   "style"
     t.string   "system"
     t.boolean  "is_active"
+    t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  add_index "lines", ["user_id"], name: "index_lines_on_user_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "name"
     t.string   "email"
     t.string   "password_digest"
     t.string   "profile_img"
-    t.string   "lines"
     t.string   "skill"
     t.string   "location"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
   end
 
-  add_foreign_key "active_lines", "users"
+  add_foreign_key "lines", "users"
 end

@@ -1,18 +1,10 @@
 <h1>User Profile</h1>
 
 <%= current_user.name %>
+
 Add a Line
-<%= form_for @line do |f| %>
-  <% if @line.errors.any? %>
-    <div class="error_messages">
-      <h2>Form is invalid</h2>
-      <ul>
-        <% for message in @line.errors.full_messages %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
+
+<%= form_for [current_user, @line] do |f| %>
   <div class="field">
     <%= f.label :brand %>
     <%= f.text_field :brand %>

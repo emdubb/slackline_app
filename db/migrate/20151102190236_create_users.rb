@@ -5,7 +5,6 @@ class CreateUsers < ActiveRecord::Migration
       t.string :email
       t.string :password_digest
       t.string :profile_img
-      t.string :lines
       t.string :skill
       t.string :location
 
