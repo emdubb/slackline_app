@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'lines#index'
+  root 'active_lines#index'
   #resources :lines, only: [:index]
   resources :users, only: [:index, :new, :create, :show]
   resources :users, shallow: true do
