@@ -2,8 +2,6 @@
 
 <%= current_user.name %>
 
-Add a Line
-
 <%= form_for [current_user, @line] do |f| %>
   <div class="field">
     <%= f.label :brand %>
@@ -28,7 +26,15 @@ Add a Line
   <div class="actions"><%= f.submit %></div>
 <% end %>
 
-
+<h3>Mah Lines</h3>
+<table>
 <% current_user.lines.each do |line| %>
-  <p>Line! <%= line.brand %> <%= line.length %>'</p>
+  <tr>
+  <td><%= line.brand %></td>
+  <td><%= line.length %>'</td>
+  <td><%= line.width %>"</td>
+  <td><%= line.style %> Line</td>
+  <td><%= line.system %></td>
+  </tr>
 <% end %>
+</table>
