@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
   root 'lines#index'
-  resources :users, only: [:new, :create]
   resources :lines, only: [:index]
+  resources :users, only: [:index, :new, :create, :show]
+  resources :users, shallow: true do
+    resources :lines
+  end
   resources :sessions, only: [:new, :create, :destroy]
   get '/login', to: 'sessions#new'
 end

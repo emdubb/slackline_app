@@ -1,0 +1,37 @@
+<h1>User Profile</h1>
+
+<%= current_user.name %>
+Add a Line
+<%= form_for @line do |f| %>
+  <% if @line.errors.any? %>
+    <div class="error_messages">
+      <h2>Form is invalid</h2>
+      <ul>
+        <% for message in @line.errors.full_messages %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="field">
+    <%= f.label :brand %>
+    <%= f.text_field :brand %>
+  </div>
+  <div class="field">
+    <%= f.label :length %>
+    <%= f.text_field :length %>
+  </div>
+  <div class="field">
+    <%= f.label :width %>
+    <%= f.password_field :width %>
+  </div>
+  <div class="field">
+    <%= f.label :style %>
+    <%= f.password_field :style %>
+  </div>
+  <div class="field">
+    <%= f.label :system %>
+    <%= f.password_field :system %>
+  </div>
+  <div class="actions"><%= f.submit %></div>
+<% end %>
