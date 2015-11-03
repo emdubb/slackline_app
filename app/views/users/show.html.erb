@@ -27,3 +27,8 @@ Add a Line
   </div>
   <div class="actions"><%= f.submit %></div>
 <% end %>
+
+
+<% current_user.lines.each do |line| %>
+  <p>Line! <%= line.brand %> <%= line.length %>'</p>
+<% end %>

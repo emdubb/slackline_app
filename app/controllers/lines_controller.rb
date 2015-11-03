@@ -11,16 +11,22 @@ class LinesController < ApplicationController
   end
 
   def create
-    @user = User.find params[:user_id]
-    @line = user.lines.build line_params
+    # @user = User.find params[:user_id]
+    @line = current_user.lines.build line_params
 
     if @line.save
       flash[:notice] = "You've added your line!"
-      redirect_to user_path(@user_id)
+      redirect_to user_path(current_user)
     else
       render :new
     end
   end
+
+  private
+
+    def line_params
+      params.require(:line).permit(:brand, :length, :width, :style, :system)
+    end
 
 end
 
