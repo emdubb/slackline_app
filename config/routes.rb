@@ -5,7 +5,10 @@ Rails.application.routes.draw do
   resources :users, shallow: true do
     resources :lines
   end
-  resources :active_lines, only: [:index]
+  #resources :active_lines, only: [:index]
+  resources :lines, shallow: true do
+    resources :active_lines
+  end
   resources :sessions, only: [:new, :create, :destroy]
   get '/login', to: 'sessions#new'
   get '/profile', to: 'users#show'

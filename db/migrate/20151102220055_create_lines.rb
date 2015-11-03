@@ -9,7 +9,6 @@ class CreateLines < ActiveRecord::Migration
       t.boolean :is_active
       t.references :user, index: true, foreign_key: true
 
-
       t.timestamps null: false
     end
   end

@@ -1,5 +1,5 @@
 class ActiveLine < ActiveRecord::Base
-
+  belongs_to :line
   after_validation :geocode
   geocoded_by :place
 

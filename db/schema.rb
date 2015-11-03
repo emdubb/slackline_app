@@ -21,9 +21,14 @@ ActiveRecord::Schema.define(version: 20151103003554) do
     t.float    "longitude"
     t.string   "difficulty"
     t.string   "message"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "started_at"
+    t.datetime "finished_at"
+    t.integer  "line_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
+
+  add_index "active_lines", ["line_id"], name: "index_active_lines_on_line_id", using: :btree
 
   create_table "lines", force: :cascade do |t|
     t.string   "brand"
@@ -50,5 +55,6 @@ ActiveRecord::Schema.define(version: 20151103003554) do
     t.datetime "updated_at",      null: false
   end
 
+  add_foreign_key "active_lines", "lines"
   add_foreign_key "lines", "users"
 end

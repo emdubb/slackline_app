@@ -5,6 +5,10 @@ class CreateActiveLines < ActiveRecord::Migration
       t.float :longitude
       t.string :difficulty
       t.string :message
+      t.datetime :started_at
+      t.datetime :finished_at
+      t.references :line, index: true, foreign_key: true
+
 
       t.timestamps null: false
     end
