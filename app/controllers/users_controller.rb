@@ -7,6 +7,7 @@ class UsersController < ApplicationController
 
   def show
     @line = Line.new
+    @user = User.find(params[:id])
   end
 
   def create
