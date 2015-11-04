@@ -4,8 +4,14 @@ class ActiveLinesController < ApplicationController
   end
 
   def create
-    line = Line.find(params[:line_id])
-    line.activate!
+    aline = Line.find(params[:line_id])
+    aline.activate!
+    redirect_to user_path(current_user)
+  end
+
+  def update
+    aline = Line.find(params[:id])
+    aline.deactivate!
     redirect_to user_path(current_user)
   end
 end

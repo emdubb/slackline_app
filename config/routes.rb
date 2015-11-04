@@ -1,11 +1,10 @@
 Rails.application.routes.draw do
   root 'active_lines#index'
-  #resources :lines, only: [:index]
-  resources :users, only: [:index, :new, :create, :show]
+
+  resources :users, only: [:index, :new, :create, :show, :edit, :update]
   resources :users, shallow: true do
     resources :lines
   end
-  #resources :active_lines, only: [:index]
   resources :lines, shallow: true do
     resources :active_lines
   end

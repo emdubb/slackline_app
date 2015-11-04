@@ -11,7 +11,9 @@ class Line < ActiveRecord::Base
   end
 
   def deactivate!
-    current_active_line.finished_at = Time.now if is_active_line?
+    cal = current_active_line
+    cal.finished_at = Time.now if is_active_line?
+    cal.save
   end
 
   def current_active_line

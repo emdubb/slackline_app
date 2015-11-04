@@ -36,7 +36,6 @@ ActiveRecord::Schema.define(version: 20151103003554) do
     t.integer  "width"
     t.string   "style"
     t.string   "system"
-    t.boolean  "is_active"
     t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
