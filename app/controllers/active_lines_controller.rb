@@ -6,12 +6,12 @@ class ActiveLinesController < ApplicationController
   def create
     aline = Line.find(params[:line_id])
     aline.activate!
-    redirect_to user_path(current_user)
+    redirect_to edit_user_path(current_user)
   end
 
   def update
     aline = Line.find(params[:id])
     aline.deactivate!
-    redirect_to user_path(current_user)
+    redirect_to edit_user_path(current_user)
   end
 end

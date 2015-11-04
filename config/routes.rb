@@ -10,5 +10,5 @@ Rails.application.routes.draw do
   end
   resources :sessions, only: [:new, :create, :destroy]
   get '/login', to: 'sessions#new'
-  get '/profile', to: 'users#show'
+  get '/profile', to: 'users#edit'
 end

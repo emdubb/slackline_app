@@ -20,6 +20,10 @@ class UsersController < ApplicationController
     end
   end
 
+  def edit
+    @line = Line.new
+  end
+
   private
     # Implement Strong Params
     def user_params

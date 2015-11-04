@@ -16,7 +16,7 @@ class LinesController < ApplicationController
 
     if @line.save
       flash[:notice] = "You've added your line!"
-      redirect_to user_path(current_user)
+      redirect_to edit_user_path(current_user)
     else
       render :new
     end
