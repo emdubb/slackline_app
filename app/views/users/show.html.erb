@@ -4,30 +4,30 @@
 <p><%= current_user.location %></p>
 <p><%= current_user.skill %></p>
 
-<button class="showform">Add Line</button>
+<button id="showform">Add Line</button>
 
 <%= form_for [current_user, @line] do |f| %>
-  <div class="field hidden">
+  <div class="field hidden add-line-form">
     <%= f.label :brand %>
     <%= f.select :brand, options_for_select(["Gibbon", "Slackers", "Slackline Industries", "Eno", "WOSS", "Other"]) %>
   </div>
-  <div class="field">
+  <div class="field hidden add-line-form">
     <%= f.label :length, "Length (ft)" %>
     <%= f.text_field :length %>
   </div>
-  <div class="field hidden">
+  <div class="field hidden add-line-form">
     <%= f.label :width, "Width (in)" %>
     <%= f.text_field :width %>
   </div>
-  <div class="field hidden">
+  <div class="field hidden add-line-form">
     <%= f.label :style %>
     <%= f.select :style, options_for_select(["Classic Line", "Jib Line", "Surf Line", "Rodeo Line"]) %>
   </div>
-  <div class="field hidden">
+  <div class="field hidden add-line-form">
     <%= f.label :system %>
     <%= f.select :system, options_for_select(["Single Ratchet", "Double Ratchet", "Carabiner"]) %>
   </div>
-  <div class="actions hidden"><%= f.submit %></div>
+  <div class="actions hidden add-line-form"><%= f.submit %></div>
 <% end %>
 
 <h3>Mah Lines</h3>
