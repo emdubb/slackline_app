@@ -11,18 +11,19 @@ $(document).ready(function() {
   }
 
   var lineButton = document.getElementById('show-line-form');
-  var postButton = document.getElementById('show-post-form');
+  //var postButton = document.getElementById('show-post-form');
 
   var addLineField = document.getElementsByClassName('add-line-form');
-  var postLineField = document.getElementsByClassName('activate-line-form');
+  //var postLineField = document.getElementsByClassName('activate-line-form');
 
   lineButton.addEventListener('click', function() {
     showForm(addLineField);
     $(lineButton).addClass('hidden');
   });
 
-  postButton.addEventListener('click', function() {
-   showForm(postLineField);
-   $(postButton).addClass('hidden');
-  });
+  // postButton.addEventListener('click', function() {
+  //  showForm(postLineField);
+  //  $(postButton).addClass('hidden');
+  // });
+
 });

@@ -23,7 +23,6 @@ class UsersController < ApplicationController
 
   def edit
     @line = Line.new
-    @active = ActiveLine.new
   end
 
   private
