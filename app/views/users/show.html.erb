@@ -35,6 +35,11 @@
   <td><%= line.width %>"</td>
   <td><%= line.style %> Line</td>
   <td><%= line.system %></td>
+  <% if line.is_active_line? %>
+    <td><strong>Currently up!</strong></td>
+  <% else %>
+    <td><%= button_to "Activate this line!", line_active_lines_path(line) %></td>
+  <% end %>
   </tr>
 <% end %>
 </table>
