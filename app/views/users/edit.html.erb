@@ -5,7 +5,7 @@
 <p><%= current_user.location %></p>
 <p><%= current_user.skill %></p>
 
-<button id="showform">Add Line</button>
+<button id="show-line-form">Add Line</button>
 
 <%= form_for [current_user, @line] do |f| %>
   <div class="field hidden add-line-form">
@@ -45,7 +45,23 @@
     <strong>Currently up!</strong>
     <%= button_to "I'm done bruh!", active_line_path(l), :method => :put %>
   <% else %>
-    <%= button_to "Activate this line!", line_active_lines_path(l) %>
+    <%= button_to "Activate this line!", line_active_lines_path(l), :id => "show-post-form" %>
+    <%= form_for [l, @active] do |f| %>
+      <div class="field hidden activate-line-form">
+        <%= f.label :location %>
+        <%= f.text_field :location %>
+      </div>
+      <div class="field hidden activate-line-form">
+        <%= f.label :difficulty %>
+        <%= f.select :difficulty , options_for_select(["Noob", "Meh", "Proficient", "Baller"])%>
+      </div>
+      <div class="field hidden activate-line-form">
+        <%= f.label :message %>
+        <%= f.text_field :message %>
+      </div>
+      <div class="actions hidden activate-line-form"><%= f.submit %></div>
+    <% end %>
+
   <% end %>
   </td>
   </tr>
