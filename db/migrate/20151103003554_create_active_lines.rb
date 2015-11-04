@@ -3,6 +3,7 @@ class CreateActiveLines < ActiveRecord::Migration
     create_table :active_lines do |t|
       t.float :latitude
       t.float :longitude
+      t.string :location
       t.string :difficulty
       t.string :message
       t.datetime :started_at

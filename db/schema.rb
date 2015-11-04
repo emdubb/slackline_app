@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 20151103003554) do
   create_table "active_lines", force: :cascade do |t|
     t.float    "latitude"
     t.float    "longitude"
+    t.string   "location"
     t.string   "difficulty"
     t.string   "message"
     t.datetime "started_at"
