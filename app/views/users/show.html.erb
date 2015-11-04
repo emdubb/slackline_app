@@ -1,29 +1,33 @@
+<%= javascript_include_tag params[:users] %>
+
 <h3><%= current_user.name %></h3>
 <p><%= current_user.location %></p>
 <p><%= current_user.skill %></p>
 
+<button class="showform">Add Line</button>
+
 <%= form_for [current_user, @line] do |f| %>
-  <div class="field">
+  <div class="field hidden">
     <%= f.label :brand %>
     <%= f.select :brand, options_for_select(["Gibbon", "Slackers", "Slackline Industries", "Eno", "WOSS", "Other"]) %>
   </div>
-  <div class="field">
+  <div class="field hidden">
     <%= f.label :length %>
     <%= f.text_field :length %>
   </div>
-  <div class="field">
+  <div class="field hidden">
     <%= f.label :width %>
     <%= f.text_field :width %>
   </div>
-  <div class="field">
+  <div class="field hidden">
     <%= f.label :style %>
     <%= f.select :style, options_for_select(["Classic Line", "Jib Line", "Surf Line", "Rodeo Line"]) %>
   </div>
-  <div class="field">
+  <div class="field hidden">
     <%= f.label :system %>
     <%= f.select :system, options_for_select(["Single Ratchet", "Double Ratchet", "Carabiner"]) %>
   </div>
-  <div class="actions"><%= f.submit %></div>
+  <div class="actions hidden"><%= f.submit %></div>
 <% end %>
 
 <h3>Mah Lines</h3>
@@ -46,3 +50,11 @@
   </tr>
 <% end %>
 </table>
+
+
+<style>
+ .hidden {
+   display: none;
+ }
+</style>
+
