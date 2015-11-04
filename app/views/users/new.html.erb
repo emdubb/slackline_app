@@ -28,7 +28,7 @@
   </div>
   <div class="field">
     <%= f.label :skill %>
-    <%= f.text_field :skill %>
+    <%= f.select :skill, options_for_select(["Noob", "Meh", "Proficient", "Baller"])%>
   </div>
   <div class="field">
     <%= f.label :location %>
