@@ -3,7 +3,7 @@ class CreateLines < ActiveRecord::Migration
     create_table :lines do |t|
       t.string :brand
       t.integer :length
-      t.integer :width
+      t.float :width
       t.string :style
       t.string :system
       t.references :user, index: true, foreign_key: true

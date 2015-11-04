@@ -33,7 +33,7 @@ ActiveRecord::Schema.define(version: 20151103003554) do
   create_table "lines", force: :cascade do |t|
     t.string   "brand"
     t.integer  "length"
-    t.integer  "width"
+    t.float    "width"
     t.string   "style"
     t.string   "system"
     t.integer  "user_id"

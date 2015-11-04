@@ -2,6 +2,7 @@
 
 <table>
 <% @active_lines.each do |al| %>
+  <% if al.is_up? %>
   <tr>
     <td><%#= al.location %></td>
     <td><%= al.difficulty %></td>
@@ -11,11 +12,7 @@
     <td><%= al.line.width %>in</td>
     <td><%= al.line.style %> Line</td>
     <td><%= al.line.system %></td>
-    <% if al.is_up? %>
-      <td>Currently up!</td>
-    <% else %>
-      <td>Finished <%= time_ago_in_words(al.finished_at) %> ago.</td>
-    <% end %>
   </tr>
+  <% end %>
 <% end %>
 </table>
