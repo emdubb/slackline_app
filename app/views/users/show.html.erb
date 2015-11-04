@@ -5,7 +5,7 @@
 <%= form_for [current_user, @line] do |f| %>
   <div class="field">
     <%= f.label :brand %>
-    <%= f.text_field :brand %>
+    <%= f.select :brand, options_for_select(["Gibbon", "Slackers", "Slackline Industries", "Eno", "WOSS", "Other"]) %>
   </div>
   <div class="field">
     <%= f.label :length %>
@@ -17,11 +17,11 @@
   </div>
   <div class="field">
     <%= f.label :style %>
-    <%= f.text_field :style %>
+    <%= f.select :style, options_for_select(["Classic Line", "Jib Line", "Surf Line", "Rodeo Line"]) %>
   </div>
   <div class="field">
     <%= f.label :system %>
-    <%= f.text_field :system %>
+    <%= f.select :system, options_for_select(["Single Ratchet", "Double Ratchet", "Carabiner"]) %>
   </div>
   <div class="actions"><%= f.submit %></div>
 <% end %>
