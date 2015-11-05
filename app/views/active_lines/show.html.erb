@@ -10,3 +10,4 @@ Posted by <%= link_to @active_line.user.name, user_path(@active_line.user.id) %>
 <%= @active_line.width %> <br>
 <%= @active_line.style %> <br>
 <%= @active_line.system %> <br>
+<%= @active_line.active_lines.last.message %> <br>
