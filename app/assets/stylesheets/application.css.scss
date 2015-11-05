@@ -33,6 +33,20 @@ a:hover {
   color: $h-purple;
 }
 
+nav {
+  height: 40px;
+  background-color: $h-purple;
+  padding-top: 10px;
+}
+
+nav a {
+  color: white;
+}
+
+nav a:hover {
+  color: $a-purple;
+}
+
 input[type="text"], input[type="password"] {
   width: 220px;
   border: 0;

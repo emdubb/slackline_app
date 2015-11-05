@@ -10,17 +10,34 @@
 </head>
 <body>
 
-<p>
-  <%= link_to 'Active Lines', root_path %>
-  &nbsp;&nbsp;|&nbsp;&nbsp;
+<nav>
   <% if current_user %>
-    <%= link_to '', profile_path, :class => "glyphicon glyphicon-user"%>
-    &nbsp;&nbsp;|&nbsp;&nbsp;
-    <%= link_to 'Logout', session_path('dummy'), method: :delete %>
+  <div class="container">
+    <div class="row">
+      <span class="col-lg-3">
+        <%= link_to '', profile_path, :class => "glyphicon glyphicon-user"%>
+      </span>
+      <span class="col-lg-3">
+        <%= link_to 'Active Lines', root_path %>
+      </span>
+      <span class="col-lg-6 pull-right">
+        <%= link_to 'Logout', session_path('dummy'), method: :delete %>
+      </span>
+    </div>
+  </div>
   <% else %>
-    <%= link_to 'Login', login_path %>
+    <div class="container">
+      <div class="row">
+        <span class="col-lg-6">
+          <%= link_to 'Active Lines', root_path %>
+        </span>
+        <span class="col-lg-6">
+          <%= link_to 'Login', login_path %>
+        </span>
+      </div>
+    </div>
   <% end %>
-</p>
+</nav>
 
 <%= yield %>
 

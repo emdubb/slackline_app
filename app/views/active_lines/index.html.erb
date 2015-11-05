@@ -1,25 +1,27 @@
-<h1>Show active lines!</h1>
+<div class="lg-col-12 center-block text-center">
+  <h1 class="text-uppercase">What's slackin'?</h1>
 
-<table>
-<% @active_lines.each do |al| %>
-  <% if al.is_up? %>
-  <tr>
-    <td><%= al.location %></td>
-    <td><%= al.difficulty %></td>
-    <td><%= al.message %></td>
-    <td><%= al.line.brand %></td>
-    <!-- <td><%#= al.line.length %>ft</td>
-    <td><%#= al.line.width %>in</td>
-    <td><%#= al.line.style %> Line</td>
-    <td><%#= al.line.system %></td> -->
-    <td><%= link_to 'More Info', active_line_path(al)%></td>
-    <td><%= link_to al.line.user.name, user_path(al.line.user.id) %></td>
-    <% if al.line.user == current_user %>
-    <td>
-      <%= button_to "I'm done bruh!", active_line_path(:id => al.line.id, :finished => 'true'), :method => :put %>
-    </td>
+  <table>
+  <% @active_lines.each do |al| %>
+    <% if al.is_up? %>
+    <tr>
+      <td><%= al.location %></td>
+      <td><%= al.difficulty %></td>
+      <td><%= al.message %></td>
+      <td><%= al.line.brand %></td>
+      <!-- <td><%#= al.line.length %>ft</td>
+      <td><%#= al.line.width %>in</td>
+      <td><%#= al.line.style %> Line</td>
+      <td><%#= al.line.system %></td> -->
+      <td><%= link_to 'More Info', active_line_path(al)%></td>
+      <td><%= link_to al.line.user.name, user_path(al.line.user.id) %></td>
+      <% if al.line.user == current_user %>
+      <td>
+        <%= button_to "I'm done bruh!", active_line_path(:id => al.line.id, :finished => 'true'), :method => :put %>
+      </td>
+      <% end %>
+    </tr>
     <% end %>
-  </tr>
   <% end %>
-<% end %>
-</table>
+  </table>
+</div>
