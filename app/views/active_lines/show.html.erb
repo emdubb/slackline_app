@@ -1,13 +1,13 @@
 <h1>This line is active!</h1>
-Posted by <%= link_to @active_line.user.name, user_path(@active_line.user.id) %>
-<% if @active_line.user == current_user %>
-  <%= button_to "I'm done bruh!", active_line_path(:id => @active_line.id, :finished => 'true'), :method => :put %>
+Posted by <%= link_to @posted_line.user.name, user_path(@posted_line.user.id) %>
+<% if @posted_line.user == current_user %>
+  <%= button_to "I'm done bruh!", active_line_path(:id => @posted_line.id, :finished => 'true'), :method => :put %>
 <% end %> <br>
-<%= @active_line.active_lines.last.location %>  <br>
-<%= @active_line.active_lines.last.difficulty %> <br>
-<%= @active_line.brand %> <br>
-<%= @active_line.length %> <br>
-<%= @active_line.width %> <br>
-<%= @active_line.style %> <br>
-<%= @active_line.system %> <br>
-<%= @active_line.active_lines.last.message %> <br>
+<%= @posted_line.active_lines.last.location %>  <br>
+<%= @posted_line.active_lines.last.difficulty %> <br>
+<%= @posted_line.brand %> <br>
+<%= @posted_line.length %> <br>
+<%= @posted_line.width %> <br>
+<%= @posted_line.style %> <br>
+<%= @posted_line.system %> <br>
+<%= @posted_line.active_lines.last.message %> <br>

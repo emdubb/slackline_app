@@ -27,6 +27,7 @@ class ActiveLinesController < ApplicationController
       aline.save
       redirect_to root_path
     else
+      binding.pry
       if aline.is_active_line?
         aline.update_attributes(aline_params)
         redirect_to root_path
@@ -39,7 +40,7 @@ class ActiveLinesController < ApplicationController
   end
 
   def show
-    @active_line = Line.find(params[:id])
+    @posted_line = Line.find(params[:id])
   end
 
   def destroy
