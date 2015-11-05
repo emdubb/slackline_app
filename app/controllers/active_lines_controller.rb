@@ -26,13 +26,12 @@ class ActiveLinesController < ApplicationController
       aline = Line.find(params[:id]).active_lines.last
 
       aline.finished_at = Time.now
-
       aline.save
       redirect_to root_path
     else
       if aline.is_active_line?
         aline.update_attributes(aline_params)
-        aline.save
+        # => aline.save
         redirect_to root_path
       else
         aline.deactivate!
