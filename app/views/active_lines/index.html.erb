@@ -13,6 +13,11 @@
     <td><%#= al.line.style %> Line</td>
     <td><%#= al.line.system %></td> -->
     <td><%= link_to al.line.user.name, user_path(al.line.user.id) %></td>
+    <% if al.line.user == current_user %>
+    <td>
+      <%#= button_to "I'm done bruh!", active_line_path(:id => al.line.id, :finished => 'true'), :method => :put %>
+    </td>
+    <% end %>
   </tr>
   <% end %>
 <% end %>
