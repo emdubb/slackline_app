@@ -25,6 +25,13 @@ class UsersController < ApplicationController
     @line = Line.new
   end
 
+  def destroy
+    @user = current_user
+    @user.destroy
+    session[:user_id] = nil
+    redirect_to root_path
+  end
+
   private
     # Implement Strong Params
     def user_params

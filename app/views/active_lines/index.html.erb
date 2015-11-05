@@ -8,10 +8,10 @@
     <td><%= al.difficulty %></td>
     <td><%= al.message %></td>
     <td><%= al.line.brand %></td>
-    <td><%= al.line.length %>ft</td>
-    <td><%= al.line.width %>in</td>
-    <td><%= al.line.style %> Line</td>
-    <td><%= al.line.system %></td>
+    <!-- <td><%#= al.line.length %>ft</td>
+    <td><%#= al.line.width %>in</td>
+    <td><%#= al.line.style %> Line</td>
+    <td><%#= al.line.system %></td> -->
     <td><%= link_to al.line.user.name, user_path(al.line.user.id) %></td>
   </tr>
   <% end %>
