@@ -20,16 +20,32 @@ class ActiveLinesController < ApplicationController
   end
 
   def update
-    aline = Line.find(params[:id])
-    aline.active_lines.last.update_attributes(aline_params)
-    #@al_info.save
-    #aline.deactivate!
-    redirect_to edit_user_path(current_user)
+    aline = Line.find(params[:id]).active_lines.last
+    # binding.pry
+    if params[:finished] == 'true'
+      aline = Line.find(params[:id]).active_lines.last
+
+      aline.finished_at = Time.now
+
+      aline.save
+      redirect_to root_path
+    else
+      if aline.is_active_line?
+        aline.update_attributes(aline_params)
+        #aline.save
+        redirect_to root_path
+      else
+        aline.deactivate!
+        redirect_to edit_user_path(current_user)
+      end
+    end
+
+
   end
 
   private
   #Implement Strong Params
     def aline_params
-      params.require(:active_line).permit(:location, :difficulty, :message)
+      params.require(:active_line).permit(:location, :difficulty, :message, :finished_at)
     end
 end

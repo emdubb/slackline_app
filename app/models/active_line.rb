@@ -11,6 +11,11 @@ class ActiveLine < ActiveRecord::Base
   before_create :set_started_at
   after_validation :geocode
 
+  def is_active_line?
+    ActiveLine.exists?
+    #active_lines.any? {|al| al.is_up? }
+  end
+
   def is_up?
     finished_at.nil?
   end

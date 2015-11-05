@@ -22,6 +22,10 @@ class LinesController < ApplicationController
     end
   end
 
+  def destroy
+
+  end
+
   private
 
     def line_params
