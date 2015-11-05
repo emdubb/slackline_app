@@ -33,7 +33,7 @@ gem 'bootstrap_form'
 gem 'geocoder'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-
+gem 'puma'
 gem 'rails_12factor', group: :production
 
 group :development, :test do
