@@ -19,13 +19,25 @@
 
 $a-purple: #85159C;
 
+body {
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+
+
 input[type="text"], input[type="password"] {
-  width: 250px;
+  width: 220px;
   border: 0;
-  background-color: rgba(255, 255, 255, .5);
+  background-color: rgba(255, 255, 255, .7);
   height: 30px;
   border-radius: 10px;
   margin: 5px;
+  padding: 0px 10px;
+}
+
+input[type="text"]:focus, input[type="password"]:focus {
+  outline: 0;
+  border: 0;
 }
 
 button, input[type="submit"] {
