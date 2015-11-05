@@ -1,7 +1,5 @@
 class LinesController < ApplicationController
   def index
-    #@user = User.find params[:user_id]
-    #@lines = @user.lines
     @lines = Line.all
   end
 
@@ -11,7 +9,6 @@ class LinesController < ApplicationController
   end
 
   def create
-    # @user = User.find params[:user_id]
     @line = current_user.lines.build line_params
 
     if @line.save

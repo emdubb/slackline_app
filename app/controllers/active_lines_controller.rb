@@ -11,7 +11,6 @@ class ActiveLinesController < ApplicationController
     aline = Line.find(params[:line_id])
     aline.activate!
     redirect_to edit_active_line_path(params[:line_id])
-    #redirect_to edit_user_path(current_user)
   end
 
   def edit
@@ -21,7 +20,6 @@ class ActiveLinesController < ApplicationController
 
   def update
     aline = Line.find(params[:id]).active_lines.last
-    # binding.pry
     if params[:finished] == 'true'
       aline = Line.find(params[:id]).active_lines.last
 
@@ -31,7 +29,6 @@ class ActiveLinesController < ApplicationController
     else
       if aline.is_active_line?
         aline.update_attributes(aline_params)
-        # => aline.save
         redirect_to root_path
       else
         aline.deactivate!
