@@ -1,0 +1,12 @@
+<h1>This line is active!</h1>
+Posted by <%= link_to @active_line.user.name, user_path(@active_line.user.id) %>
+<% if @active_line.user == current_user %>
+  <%= button_to "I'm done bruh!", active_line_path(:id => @active_line.id, :finished => 'true'), :method => :put %>
+<% end %> <br>
+<%= @active_line.active_lines.last.location %>  <br>
+<%= @active_line.active_lines.last.difficulty %> <br>
+<%= @active_line.brand %> <br>
+<%= @active_line.length %> <br>
+<%= @active_line.width %> <br>
+<%= @active_line.style %> <br>
+<%= @active_line.system %> <br>

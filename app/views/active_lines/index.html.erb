@@ -12,6 +12,7 @@
     <td><%#= al.line.width %>in</td>
     <td><%#= al.line.style %> Line</td>
     <td><%#= al.line.system %></td> -->
+    <td><%= link_to 'More Info', active_line_path(al)%></td>
     <td><%= link_to al.line.user.name, user_path(al.line.user.id) %></td>
     <% if al.line.user == current_user %>
     <td>

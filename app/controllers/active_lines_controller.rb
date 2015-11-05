@@ -38,6 +38,10 @@ class ActiveLinesController < ApplicationController
 
   end
 
+  def show
+    @active_line = Line.find(params[:id])
+  end
+
   def destroy
     @line = Line.find(params[:id])
     @line.destroy
