@@ -21,9 +21,9 @@ class ActiveLinesController < ApplicationController
 
   def update
     aline = Line.find(params[:id])
-    @al_info = aline.active_lines.last.update(aline_params)
+    aline.active_lines.last.update_attributes(aline_params)
     #@al_info.save
-    aline.deactivate!
+    #aline.deactivate!
     redirect_to edit_user_path(current_user)
   end
 
