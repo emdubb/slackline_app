@@ -15,4 +15,5 @@
 //= require turbolinks
 //= require bootstrap-sprockets
 //= require bootstrap
+//= require dependent-fields
 //= require_tree .

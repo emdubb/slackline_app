@@ -3,6 +3,7 @@ console.log('users.js linked!');
 
 $(document).ready(function() {
   console.log("ready!");
+  DependentFields.bind()
 
   function showForm(e) {
     for (var i = 0 ; i < addLineField.length; i++) {
