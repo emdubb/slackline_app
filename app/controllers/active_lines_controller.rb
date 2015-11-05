@@ -19,17 +19,15 @@ class ActiveLinesController < ApplicationController
   end
 
   def update
-    aline = Line.find(params[:id]).active_lines.last
     if params[:finished] == 'true'
       aline = Line.find(params[:id]).active_lines.last
-
       aline.finished_at = Time.now
       aline.save
       redirect_to root_path
     else
-      binding.pry
+    aline = ActiveLine.find(params[:id]).line
       if aline.is_active_line?
-        aline.update_attributes(aline_params)
+        aline.active_lines.last.update_attributes(aline_params)
         redirect_to root_path
       else
         aline.deactivate!
@@ -54,4 +52,5 @@ class ActiveLinesController < ApplicationController
     def aline_params
       params.require(:active_line).permit(:location, :difficulty, :message, :finished_at)
     end
+
 end
