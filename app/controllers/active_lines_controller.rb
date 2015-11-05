@@ -21,15 +21,15 @@ class ActiveLinesController < ApplicationController
 
   def update
     aline = Line.find(params[:id])
-    #@al_info = aline.active_lines.last
-    #binding.pry
+    @al_info = aline.active_lines.last.update(aline_params)
+    #@al_info.save
     aline.deactivate!
     redirect_to edit_user_path(current_user)
   end
 
   private
   #Implement Strong Params
-  def aline_params
-    params.require(:active_line).permit(:location, :difficulty, :message)
-  end
+    def aline_params
+      params.require(:active_line).permit(:location, :difficulty, :message)
+    end
 end
