@@ -32,7 +32,7 @@ class ActiveLinesController < ApplicationController
     else
       if aline.is_active_line?
         aline.update_attributes(aline_params)
-        #aline.save
+        aline.save
         redirect_to root_path
       else
         aline.deactivate!
@@ -40,7 +40,12 @@ class ActiveLinesController < ApplicationController
       end
     end
 
+  end
 
+  def destroy
+    @line = Line.find(params[:id])
+    @line.destroy
+    redirect_to edit_user_path
   end
 
   private

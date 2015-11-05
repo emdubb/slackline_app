@@ -4,7 +4,7 @@
 <% @active_lines.each do |al| %>
   <% if al.is_up? %>
   <tr>
-    <td><%#= al.location %></td>
+    <td><%= al.location %></td>
     <td><%= al.difficulty %></td>
     <td><%= al.message %></td>
     <td><%= al.line.brand %></td>

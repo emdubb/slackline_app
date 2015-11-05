@@ -1,6 +1,6 @@
 class Line < ActiveRecord::Base
   belongs_to :user
-  has_many :active_lines
+  has_many :active_lines, dependent: :destroy
 
   def is_active_line?
     active_lines.any? {|al| al.is_up? }
