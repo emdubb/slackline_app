@@ -1,8 +1,8 @@
 <div class="lg-col-12 center-block text-center">
   <h1 class="text-uppercase">What's slackin'?</h1>
 
-  <table>
-  <% @active_lines.each do |al| %>
+  <table class="table">
+  <% @active_lines.reverse_each do |al| %>
     <% if al.is_up? %>
     <tr>
       <td><%= al.location %></td>
