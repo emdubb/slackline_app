@@ -44,7 +44,7 @@
       <%= link_to '', active_line_path(:id => l.id, :finished => 'true'), :method => :put, :class => "glyphicon glyphicon-remove takedown" %>
 
     <% else %>
-      <%= button_to "Post my line!", line_active_lines_path(l.id)%>
+      <%= link_to "Post my line!", line_active_lines_path(l.id)%>
     <% end %>
     </td>
     <td><%= link_to "Delete this line FOREVER", active_line_path(l), :method => :delete, data: { confirm: "For real? We aren't kidding." } %></td>
