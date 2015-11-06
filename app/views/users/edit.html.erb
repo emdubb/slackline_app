@@ -40,19 +40,19 @@
     <td><%= l.system %></td>
     <td>
     <% if l.is_active_line? %>
-      <strong>Currently up!</strong>
-      <%= button_to "I'm done bruh!", active_line_path(:id => l.id, :finished => 'true'), :method => :put %>
+      <strong>Currently up! &nbsp</strong>
+      <%= link_to '', active_line_path(:id => l.id, :finished => 'true'), :method => :put, :class => "glyphicon glyphicon-remove takedown" %>
 
     <% else %>
-      <%= button_to "Activate this line!", line_active_lines_path(l.id)%>
+      <%= button_to "Post my line!", line_active_lines_path(l.id)%>
     <% end %>
     </td>
-    <td><%= button_to "BYE!", active_line_path(l), :method => :delete, data: { confirm: "Are you sure?" } %></td>
+    <td><%= link_to "Delete this line FOREVER", active_line_path(l), :method => :delete, data: { confirm: "For real? We aren't kidding." } %></td>
     </tr>
   <% end %>
   </table>
 
-  <p>Delete Profile - <%= link_to "I don't slack no more", user_path(current_user), :method => :delete, data: { confirm: "Are you sure?" } %>
+  <p>I don't slack no more - <%= link_to "DELETE PROFILE", user_path(current_user), :method => :delete, data: { confirm: "Are you sure?" } %>
 </div>
 
 
