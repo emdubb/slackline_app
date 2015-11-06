@@ -1,4 +1,3 @@
-<%= javascript_include_tag params[:users] %>
 <div class="container">
   <h1>Wuddup, <%= current_user.name %>!</h1>
   <p><%= current_user.skill %>, <%= current_user.location %></p>
@@ -28,7 +27,7 @@
   <% end %>
 
   <h3>Mah Lines</h3>
-    <button id="show-line-form">Add Line</button>
+  <button id="show-line-form">Add Line</button>
 
   <table class="table">
   <% current_user.lines.each do |l| %>
@@ -41,6 +40,7 @@
     <td>
     <% if l.is_active_line? %>
       <strong>Currently up! &nbsp</strong>
+      <%#= link_to 'Link', :method => :put, :class => "glyphicon glyphicon-remove takedown" %>
       <%= link_to '', active_line_path(:id => l.id, :finished => 'true'), :method => :put, :class => "glyphicon glyphicon-remove takedown" %>
 
     <% else %>
@@ -57,3 +57,4 @@
 
 
 
+<%= javascript_include_tag params[:users] %>

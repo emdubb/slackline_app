@@ -14,6 +14,7 @@ class ActiveLinesController < ApplicationController
   end
 
   def edit
+    # binding.pry
     aline = Line.find(params[:id])
     @al_info = aline.active_lines.last
   end
