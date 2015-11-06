@@ -38,7 +38,7 @@ class ActiveLinesController < ApplicationController
   end
 
   def show
-    @posted_line = Line.find(params[:id])
+    @posted_line = ActiveLine.find(params[:id]).line
   end
 
   def destroy
