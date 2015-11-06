@@ -7,9 +7,9 @@ Slacklining is a balance sport. It is done by setting up a line made of nylon we
 
 ![Slackline Image](https://www.fairviewhs.org/system/photos/357/original/Slackline_club_2.jpg?1329359306)
 
-CHALLENGE: Slackling has a substaintial community built around it but it is not widely recognized, so finding locations to set up a line is challenging. Slackers are often kicked out of parks because it is thought to damage trees (which it does not), or the sport is perceived as dangerous.
+Challenge: Slackling has a substaintial community built around it but it is not widely recognized, so finding locations to set up a line is challenging. Slackers are often kicked out of parks because it is thought to damage trees (which it does not), or the sport is perceived as dangerous.
 
-SOLUTION: This application allows slackers to post the location of their lines. All users will be able to see a list of posted lines allowing the slackline community to foster and provide slackers with places they can practice with fellow slackers.
+Solution: This application allows slackers to post the location of their lines. All users will be able to see a list of posted lines allowing the slackline community to foster and provide slackers with places they can practice with fellow slackers.
 
 Follow the progress on [Trello](https://trello.com/b/m6QEUkeR/slackline-application)
 
@@ -21,21 +21,23 @@ Just got the app [here](https://desolate-wildwood-7177.herokuapp.com/) and you c
 
 ### Active Lines
 
+See all active lines and get more information
+
 ![Active Lines](https://i.imgur.com/EOWM2mF.png)
 
-See all active lines and get more information
 
 ### Login
 
+Login to add and post lines
+
 ![App Login](https://i.imgur.com/qonN5vH.jpg)
 
-Login to add and post lines
 
 ### Profiles
 
-![Profile](https://i.imgur.com/IuYlTdF.png)
-
 Add and remove lines from your profile and view other users profiles
+
+![Profile](https://i.imgur.com/IuYlTdF.png)
 
 ## Next Steps
 
