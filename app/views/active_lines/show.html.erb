@@ -1,13 +1,13 @@
-<h1>This line is active!</h1>
-Posted by <%= link_to @posted_line.user.name, user_path(@posted_line.user.id) %>
-<% if @posted_line.user == current_user %>
-  <%= button_to "I'm done bruh!", active_line_path(:id => @posted_line.id, :finished => 'true'), :method => :put %>
-<% end %> <br>
-<%= @posted_line.active_lines.last.location %>  <br>
-<%= @posted_line.active_lines.last.difficulty %> <br>
-<%= @posted_line.brand %> <br>
-<%= @posted_line.length %> <br>
-<%= @posted_line.width %> <br>
-<%= @posted_line.style %> <br>
-<%= @posted_line.system %> <br>
-<%= @posted_line.active_lines.last.message %> <br>
+<div class="container">
+  <br>
+  <p class="text-uppercase"> <span class="glyphicon glyphicon-chevron-left"></span> <%= link_to 'Active lines', root_path%></p>
+  <h3><%= @posted_line.active_lines.last.location %></h3>
+  <p><small>Posted by <%= link_to @posted_line.user.name, user_path(@posted_line.user.id) %></small></p>
+  <p><%= @posted_line.active_lines.last.message %></>
+  <p><strong>Difficulty Level: </strong><%= @posted_line.active_lines.last.difficulty %></p>
+  <p><%= @posted_line.brand %>, <%= @posted_line.style %>, <%= @posted_line.system %> </p>
+  <p><%= @posted_line.length %>, <%= @posted_line.width %></p>
+  <% if @posted_line.user == current_user %>
+    <%= button_to "I'm done bruh!", active_line_path(:id => @posted_line.id, :finished => 'true'), :method => :put %>
+  <% end %>
+</div>
