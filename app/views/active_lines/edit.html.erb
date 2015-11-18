@@ -1,15 +1,17 @@
-<%= form_for @al_info do |f| %>
-  <div class="field">
-    <%= f.label :location %>
-    <%= f.text_field :location %>
-  </div>
-  <div class="field">
-    <%= f.label :difficulty %>
-    <%= f.select :difficulty, options_for_select(["Noob", "Meh", "Proficient", "Baller"]) %>
-  </div>
-  <div class="field">
-    <%= f.label :message %>
-    <%= f.text_field :message %>
-  </div>
-  <div class="actions"><%= f.submit %></div>
-<% end %>
+<div class="container">
+  <%= form_for @al_info do |f| %>
+    <div class="field">
+      <%= f.label :location %>
+      <%= f.text_field :location, :required => true %>
+    </div>
+    <div class="field">
+      <%= f.label :difficulty %>
+      <%= f.select :difficulty, options_for_select(["Noob", "Meh", "Proficient", "Baller"]), {:include_blank => "--"}, :required => true %>
+    </div>
+    <div class="field">
+      <%= f.label :message %>
+      <%= f.text_field :message, :required => true %>
+    </div>
+    <div class="actions"><%= f.submit %></div>
+  <% end %>
+</div>
