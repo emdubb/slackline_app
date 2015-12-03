@@ -1,4 +1,4 @@
-#Slackline Application
+#What's Slackin'
 
 ## Hold the phone, what is a slackline???
 
