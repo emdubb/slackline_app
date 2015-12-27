@@ -9724,9 +9724,16 @@ h1 {
   text-align: center;
   font-size: 2em; }
 
+h2 {
+  font-size: 1.5em; }
+
 a {
   color: #86029E;
   text-decoration: none; }
+
+.right {
+  display: inline;
+  float: right; }
 
 .tabs-top > .tabs, .tabs.tabs-top {
   top: 0; }
@@ -9763,3 +9770,13 @@ a {
 
 #login .content {
   margin-top: 75px; }
+
+.inline-title {
+  display: inline;
+  padding-right: 10px; }
+
+.difficulty {
+  width: 12px;
+  height: 12px;
+  background-color: #411642;
+  display: inline-block; }

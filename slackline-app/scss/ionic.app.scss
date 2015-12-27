@@ -28,9 +28,17 @@ h1 {
   font-size: 2em;
 }
 
+h2 {
+  font-size: 1.5em;
+}
+
 a {
   color: $purple;
   text-decoration: none;
+}
+
+.post {
+  margin-top: 300px;
 }
 
 .tabs-top > .tabs, .tabs.tabs-top {
@@ -79,4 +87,17 @@ a {
 #login .content {
   margin-top: 75px;
 }
+
+.inline-title {
+  display: inline;
+  padding-right: 10px;
+}
+
+.difficulty {
+  width: 12px;
+  height: 12px;
+  background-color: $royal;
+  display: inline-block;
+}
+
 

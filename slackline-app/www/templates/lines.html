@@ -1,5 +1,47 @@
-<ion-view>
+<ion-view id="lines">
   <ion-content>
-    <h1>{{vm.test}}</h1>
+    <div class="bar bar-header item-input-inset">
+      <label class="item-input-wrapper">
+        <i class="icon ion-ios-search placeholder-icon"></i>
+        <input type="search" placeholder="Find a line">
+      </label>
+      <button class="button button-clear">
+        Cancel
+      </button>
+    </div>
+    <div class="list">
+      <a class="item item-icon-left" href="#">
+        <i class="icon ion-ios-plus-empty"></i>
+        <h2>Post a line</h2>
+      </a>
+      <a class="item item-icon-right" href="#">
+        <h2 class="inline-title">
+          Santa Monica Pier
+        </h2>
+          <div class="difficulty"></div>
+        <p>5.5 miles away</p>
+        <i class="icon ion-ios-arrow-right"></i>
+      </a>
+      <a class="item item-icon-right" href="#">
+        <h2 class="inline-title">
+          Santa Monica Pier
+        </h2>
+          <div class="difficulty"></div>
+          <div class="difficulty"></div>
+          <div class="difficulty"></div>
+          <div class="difficulty"></div>
+        <p>5.5 miles away</p>
+        <i class="icon ion-ios-arrow-right"></i>
+      </a>
+      <a class="item item-icon-right" href="#">
+        <h2 class="inline-title">
+          DTLA
+        </h2>
+          <div class="difficulty"></div>
+          <div class="difficulty"></div>
+        <p>1.2 miles away</p>
+        <i class="icon ion-ios-arrow-right"></i>
+      </a>
+    </div>
   </ion-content>
 </ion-view>
