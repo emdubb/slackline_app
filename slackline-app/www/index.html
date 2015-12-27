@@ -18,11 +18,27 @@
 
     <!-- your app's js -->
     <script src="js/app.module.js"></script>
-    <script src="js/controllers.js"></script>
-    <script src="js/services.js"></script>
+    <script src="js/app.routes.js"></script>
+    <script src="js/controllers/login.controller.js"></script>
+    <script src="js/controllers/lines.controller.js"></script>
+    <script src="js/controllers/profile.controller.js"></script>
+    <script src="js/controllers/signup.controller.js"></script>
+    <script src="js/localStorage.service.js"></script>
   </head>
-  <body ng-app="starter">
-
+  <body ng-app="slackin">
+    <ion-header-bar class="bar-stable">
+      <div class="buttons">
+        <a ui-sref="lines">
+          <button class="button button-clear icon ion-ios-home"></button>
+        </a>
+      </div>
+      <h1 class="title">What's Slackin'?</h1>
+      <div class="buttons">
+        <a ui-sref="profile">
+          <button class="button button-clear icon ion-ios-person"></button>
+        </a>
+      </div>
+    </ion-header-bar>
 
     <ion-nav-view></ion-nav-view>
   </body>
