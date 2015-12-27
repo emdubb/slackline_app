@@ -19,5 +19,14 @@ $dark:                            #444 !default;
 $ionicons-font-path: "../lib/ionic/fonts" !default;
 
 // Include all of Ionic
+$royal:                           #411642 !default;
+
 @import "www/lib/ionic/scss/ionic";
 
+.tabs-top > .tabs, .tabs.tabs-top {
+  top: 0;
+}
+
+.has-tabs-top {
+  top: 48px;
+}
