@@ -9720,8 +9720,46 @@ a.button {
   -webkit-transition-duration: 0s;
   transition-duration: 0s; }
 
+h1 {
+  text-align: center;
+  font-size: 2em; }
+
+a {
+  color: #86029E;
+  text-decoration: none; }
+
 .tabs-top > .tabs, .tabs.tabs-top {
   top: 0; }
 
 .has-tabs-top {
   top: 48px; }
+
+.nav-padding {
+  padding: 0px 4px; }
+
+.padding {
+  padding-top: 25px; }
+
+.item-input {
+  border-radius: 10px;
+  margin: 12px; }
+
+.input-label {
+  text-align: left;
+  color: grey; }
+
+#login, #signup {
+  background-image: url(../img/mainbg.jpg);
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  color: white; }
+
+#login h1, #signup h1 {
+  color: white; }
+
+#login button {
+  width: 150px; }
+
+#login .content {
+  margin-top: 75px; }

@@ -17,11 +17,21 @@ $dark:                            #444 !default;
 
 // The path for our ionicons font files, relative to the built CSS in www/css
 $ionicons-font-path: "../lib/ionic/fonts" !default;
+$royal: #411642 !default;
+$purple: #86029E;
 
 // Include all of Ionic
-$royal:                           #411642 !default;
-
 @import "www/lib/ionic/scss/ionic";
+
+h1 {
+  text-align: center;
+  font-size: 2em;
+}
+
+a {
+  color: $purple;
+  text-decoration: none;
+}
 
 .tabs-top > .tabs, .tabs.tabs-top {
   top: 0;
@@ -30,3 +40,43 @@ $royal:                           #411642 !default;
 .has-tabs-top {
   top: 48px;
 }
+
+
+.nav-padding {
+  padding: 0px 4px;
+}
+
+.padding {
+  padding-top: 25px;
+}
+
+.item-input {
+  border-radius: 10px;
+  margin: 12px;
+}
+
+.input-label {
+  text-align: left;
+  color: grey;
+}
+
+#login, #signup {
+  background-image: url(../img/mainbg.jpg);
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  color: white;
+}
+
+#login h1, #signup h1 {
+  color: white;
+}
+
+#login button {
+  width: 150px;
+}
+
+#login .content {
+  margin-top: 75px;
+}
+

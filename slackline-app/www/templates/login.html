@@ -1,5 +1,19 @@
-<ion-view>
-  <ion-content>
-    <h1>{{vm.test}}</h1>
+<ion-view id="login">
+  <ion-content class="padding">
+    <div class="content">
+      <h1>Login</h1>
+      <div class="list">
+        <label class="item item-input">
+          <span class="input-label">Email:</span>
+          <input type="email">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Password:</span>
+          <input type="password">
+        </label>
+        <button type="submit" class="button button-royal">Login</button>
+      </div>
+      <p>Don't have an account? <a ui-sref="signup">Sign Up!</a></p>
+    </div>
   </ion-content>
 </ion-view>
