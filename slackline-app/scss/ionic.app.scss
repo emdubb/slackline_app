@@ -37,10 +37,6 @@ a {
   text-decoration: none;
 }
 
-.post {
-  margin-top: 300px;
-}
-
 .tabs-top > .tabs, .tabs.tabs-top {
   top: 0;
 }
@@ -56,6 +52,10 @@ a {
 
 .padding {
   padding-top: 25px;
+}
+
+.top-padding {
+  margin: 15px 10px 0px;
 }
 
 .item-input {
@@ -100,4 +100,7 @@ a {
   display: inline-block;
 }
 
+.post {
+  float: right;
+}
 

@@ -9731,10 +9731,6 @@ a {
   color: #86029E;
   text-decoration: none; }
 
-.right {
-  display: inline;
-  float: right; }
-
 .tabs-top > .tabs, .tabs.tabs-top {
   top: 0; }
 
@@ -9746,6 +9742,9 @@ a {
 
 .padding {
   padding-top: 25px; }
+
+.top-padding {
+  margin: 15px 10px 0px; }
 
 .item-input {
   border-radius: 10px;
@@ -9780,3 +9779,6 @@ a {
   height: 12px;
   background-color: #411642;
   display: inline-block; }
+
+.post {
+  float: right; }

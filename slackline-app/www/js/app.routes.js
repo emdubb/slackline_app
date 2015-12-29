@@ -32,6 +32,12 @@
         templateUrl: 'templates/profile.html',
         controller: 'ProfileController',
         controllerAs: 'vm'
+      })
+      .state('line', {
+        url: '/lines/:lineId',
+        templateUrl: 'templates/line.html',
+        controller: 'LineController',
+        controllerAs: 'vm'
       });
 
       // if none of the above states are matched, use this as the fallback
