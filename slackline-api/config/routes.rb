@@ -1,14 +1,14 @@
 Rails.application.routes.draw do
-  root 'active_lines#index'
+  root 'api#index'
 
-  resources :users, only: [:index, :new, :create, :show, :edit, :update]
-  resources :users, shallow: true do
-    resources :lines
+  namespace :api do
+    resources :users, only: [:index, :new, :create, :show, :update], shallow: true do
+      resources :lines, shallow: true do
+        resources :active_lines
+      end
+    end
+    # resources :sessions, only: [:new, :create, :destroy]
+    # get '/login', to: 'sessions#new'
+    # get '/profile', to: 'users#edit'
   end
-  resources :lines, shallow: true do
-    resources :active_lines
-  end
-  resources :sessions, only: [:new, :create, :destroy]
-  get '/login', to: 'sessions#new'
-  get '/profile', to: 'users#edit'
 end
