@@ -11,11 +11,6 @@ Challenge: Slackling has a substaintial community built around it but it is not 
 
 Solution: This application allows slackers to post the location of their lines. All users will be able to see a list of posted lines allowing the slackline community to foster and provide slackers with places they can practice with fellow slackers.
 
-Follow the progress on [Trello](https://trello.com/b/m6QEUkeR/slackline-application)
-
-## Get Started
-
-Just got the app [here](https://desolate-wildwood-7177.herokuapp.com/) and you can get slackin! To see recent lnies you don't even have to log in. If you want to contribute to the community and post your line create an account and add your line(s) and post them wheneve you are slacking! See ya around!
 
 ## Design
 
@@ -38,6 +33,20 @@ Login to add and post lines
 Add and remove lines from your profile and view other users profiles
 
 ![Profile](https://i.imgur.com/IuYlTdF.png)
+
+## Technologies Used
+
+* HTML
+* CSS
+* JavaScript
+* [Slackline API](./slackline_api/README.md)
+* [Ionic](http://ionicframework.com/docs/)
+* [Angular](https://docs.angularjs.org/api) 
+* [PostgreSQL](http://www.postgresql.org/docs/)
+* [Xcode Simulator](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/iOS_Simulator_Guide/Introduction/Introduction.html)
+
+## Get Started
+
 
 ## Next Steps
 
