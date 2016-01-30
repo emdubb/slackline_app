@@ -1,4 +1,4 @@
-# Southern California Tsunami Evacuation Resource API
+# What's Slackin API
 
 _**[OVERVIEW](#overview)**_ | 
 _**[GETTING STARTED](#start)**_ | 
@@ -29,21 +29,18 @@ Run `bundle install`
 Rails Route | HTTP Verb  | Endpoint                                | Access    
 :----------:|:----------:|-----------------------------------------|:---------------:
 **INDEX**   | `GET`      | `/`                                     | 
-**INDEX**   | `GET`      | `/api/lines/:line_id/active_lines`
-**CREATE**  | `POST`     | `/api/lines/:line_id/active_lines`
-**SHOW**    | `GET`      | `/api/active_lines/:id`     
-**UPDATE**  | `PATCH/PUT`| `/api/active_lines/:id`
-**DESTROY** | `DELETE`   | `/api/active_lines/:id`               
-**INDEX**   | `GET`      | `/api/users/:user_id/lines`            
-**CREATE**  | `POST`     | `/api/users/:user_id/lines`            
-**SHOW**    | `GET`      | `/api/lines/:id`                       
-**UPDATE**  | `PATCH/PUT`| `/api/lines/:id`                       
-**DESTROY** | `DELETE`   | `/api/lines/:id`                       
 **INDEX**   | `GET`      | `/api/users`                           
 **CREATE**  | `POST`     | `/api/users`                           
 **SHOW**    | `GET`      | `/api/users/:id`                       
 **UPDATE**  | `PATCH/PUT`| `/api/users/:id`                       
 **DESTROY** | `DELETE`   | `/api/users/:id`                       
+**INDEX**   | `GET`      | `/api/users/:user_id/lines`            
+**CREATE**  | `POST`     | `/api/users/:user_id/lines`            
+**UPDATE**  | `PATCH/PUT`| `/api/lines/:id`                       
+**DESTROY** | `DELETE`   | `/api/lines/:id`                       
+**INDEX**   | `GET`      | `/api/lines/:line_id/active_lines`
+**CREATE**  | `POST`     | `/api/lines/:line_id/active_lines`
+**UPDATE**  | `PATCH/PUT`| `/api/active_lines/:id`
 
 
 <a name="auth"></a>
