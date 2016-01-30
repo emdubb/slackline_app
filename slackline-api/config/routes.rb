@@ -7,8 +7,5 @@ Rails.application.routes.draw do
         resources :active_lines, only: [:index, :create, :update]
       end
     end
-    # resources :sessions, only: [:new, :create, :destroy]
-    # get '/login', to: 'sessions#new'
-    # get '/profile', to: 'users#edit'
   end
 end
