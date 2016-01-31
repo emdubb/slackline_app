@@ -11,33 +11,33 @@
     $stateProvider
       .state('lines', {
         url: '/lines',
-        templateUrl: 'templates/lines.html',
+        templateUrl: 'components/lines/lines.html',
         controller: 'LinesController',
-        controllerAs: 'vm'
+        controllerAs: 'LinesCtrl'
       })
       .state('login', {
         url: '/login',
-        templateUrl: 'templates/login.html',
+        templateUrl: 'components/login/login.html',
         controller: 'LoginController',
-        controllerAs: 'vm'
+        controllerAs: 'LoginCtrl'
       })
       .state('signup', {
         url: '/signup',
-        templateUrl: 'templates/signup.html',
+        templateUrl: 'components/login/signup.html',
         controller: 'SignupController',
-        controllerAs: 'vm'
+        controllerAs: 'SignupCtrl'
       })
       .state('profile', {
         url: '/profile',
-        templateUrl: 'templates/profile.html',
+        templateUrl: 'components/profile/profile.html',
         controller: 'ProfileController',
-        controllerAs: 'vm'
+        controllerAs: 'ProfileCtrl'
       })
       .state('line', {
-        url: '/lines/:lineId',
-        templateUrl: 'templates/line.html',
+        url: '/lines/:id',
+        templateUrl: 'components/lines/line.html',
         controller: 'LineController',
-        controllerAs: 'vm'
+        controllerAs: 'LineCtrl'
       });
 
       // if none of the above states are matched, use this as the fallback
