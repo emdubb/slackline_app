@@ -9755,7 +9755,7 @@ a {
   color: grey; }
 
 #login, #signup {
-  background-image: url(../img/mainbg.jpg);
+  background-image: url(../assets/img/mainbg.jpg);
   background-size: cover;
   background-position: center;
   text-align: center;
