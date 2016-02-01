@@ -34,7 +34,8 @@
       </div>
       <h1 class="title nav-padding">What's Slackin'?</h1>
       <div class="buttons nav-padding">
-        <button class="button button-clear icon ion-ios-person" ng-click="GlobalCtrl.profile()"></button>
+        <button ng-if="GlobalCtrl.currentUser" class="button button-clear icon ion-ios-person" ng-click="GlobalCtrl.profile()"></button>
+        <button ng-if="!GlobalCtrl.currentUser" class="button button-clear" ng-click="GlobalCtrl.login()">Login</button>
       </div>
     </ion-header-bar>
 
