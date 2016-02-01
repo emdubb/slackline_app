@@ -11,17 +11,29 @@
     var vm = this
     vm.profile = profile
     vm.home = home
+    vm.login = login
+    vm.logout = logout
+
+    if (localStorageService.loadData('token')) {
+      vm.currentUser = true
+    } else {
+      vm.currentUser = false
+    }
 
     function home() {
       $state.go('lines')
     }
 
     function profile() {
-      if (localStorageService.loadData('token')) {
-        $state.go('profile')
-      } else {
-        $state.go('login')
-      }
+      $state.go('profile')
+    }
+
+    function login() {
+      $state.go('login')
+    }
+
+    function logout() {
+      localStorageService.saveData('token', '')
     }
   }
 
