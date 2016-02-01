@@ -20,24 +20,21 @@
     <script src="app.module.js"></script>
     <script src="app.routes.js"></script>
     <script src="shared/localStorage.service.js"></script>
+    <script src="shared/global.controller.js"></script>
     <script src="components/login/login.controller.js"></script>
     <script src="components/lines/lines.controller.js"></script>
     <script src="components/lines/line.controller.js"></script>
     <script src="components/profile/profile.controller.js"></script>
     <script src="components/login/signup.controller.js"></script>
   </head>
-  <body ng-app="slackin">
+  <body ng-app="slackin" ng-controller="GlobalController as GlobalCtrl">
     <ion-header-bar class="bar-royal">
       <div class="buttons nav-padding">
-        <a ui-sref="lines">
-          <button class="button button-clear icon ion-ios-home"></button>
-        </a>
+        <button class="button button-clear icon ion-ios-home" ng-click="GlobalCtrl.home()"></button>
       </div>
       <h1 class="title nav-padding">What's Slackin'?</h1>
       <div class="buttons nav-padding">
-        <a ui-sref="profile">
-          <button class="button button-clear icon ion-ios-person"></button>
-        </a>
+        <button class="button button-clear icon ion-ios-person" ng-click="GlobalCtrl.profile()"></button>
       </div>
     </ion-header-bar>
 
