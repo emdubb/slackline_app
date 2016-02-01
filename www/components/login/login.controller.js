@@ -9,7 +9,16 @@
 
   function LoginController($state, $log, $http){
     var vm = this;
-    vm.test = "LoginController linked!"
+    vm.login = login
+    vm.user = {
+      email: "",
+      password: ""
+    }
+
+    function login() {
+      $log.log("email: ", vm.user.email, "password: ", vm.user.password)
+    }
+
   }
 
 })();
