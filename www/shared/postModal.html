@@ -1,0 +1,27 @@
+<ion-modal-view>
+  <ion-header-bar class="bar-royal">
+    <h1 class="title">Post a Line</h1>
+    <div class="buttons">
+      <button class="button button-clear" ng-click="closeModal()">Close</button>
+    </div>
+  </ion-header-bar>
+  <ion-content>
+    <ion-list>
+      <form ng-submit="submitForm()">
+        <label class="item item-input">
+          <input type="text" placeholder="Line">
+        </label>
+        <label class="item item-input">
+          <input type="text" placeholder="Location">
+        </label>
+        <label class="item item-input">
+          <input type="text" placeholder="Difficulty">
+        </label>
+        <label class="item item-input">
+          <textarea placeholder="Message"></textarea>
+        </label>
+        <input type="submit" value="Post" class="button button-royal" />
+      </form>
+    </ion-list>
+  </ion-content>
+</ion-modal-view>
